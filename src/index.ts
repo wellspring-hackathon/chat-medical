@@ -4,10 +4,14 @@ import express, {
   type NextFunction
 } from "express";
 import * as dotenv from "dotenv";
+import { Server } from "socket.io";
+import http from "http";
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
+const server = http.createServer(app);
+const io = new Server(server);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -16,8 +20,6 @@ process.on("uncaughtException", (err) => {
   console.log(`Shutting down the server due to uncaught Expectation`);
   process.exit(1);
 });
-
-
 
 
 app.get("/", (_req: Request, res: Response) => {
