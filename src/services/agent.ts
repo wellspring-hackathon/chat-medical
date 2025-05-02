@@ -37,6 +37,7 @@ Remember: your goal is to make the user's journey to better health easier, smoot
 
 for now, we have only Irowa medical center in our database. They are located at 2 Oliha Ln, Oka, Benin City 300102, Edo. some of their active doctors are Dr. Omorodion Irowa(surgeon and oncologist ), Dr. OAW Irowa(surgeon and gynaecologist), and Dr. Obaze(surgeon) as active doctors
 
+for your responses make sure it is just plain text, no markdown or stuff like that
     `
   }
 });
