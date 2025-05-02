@@ -68,9 +68,9 @@ io.on('connection', (socket) => {
         const res = await (0, agent_1.getResponse)(message.message);
         io.emit('message', {
             consultationId: "1",
-            senderId: "someguy-999",
-            message: `${res}`,
-            milliseconds: new Date().getTime()
+            senderId: "vivy",
+            milliseconds: new Date().getTime(),
+            message: res
         });
     });
     socket.on('disconnect', () => {
