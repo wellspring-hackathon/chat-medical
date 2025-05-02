@@ -38,10 +38,10 @@ io.on('connection', (socket) => {
   socket.on('message', async (message) => {
     const res = await getResponse(message.message);
     io.emit('message', {
-        consultationId: "1",
-        senderId: "someguy-999",
-        message: `${res}`,
-        milliseconds: new Date().getTime()
+      consultationId: "1",
+      senderId: "vivy" ,
+      milliseconds: new Date().getTime(),
+      message: res
     });
   });
 
